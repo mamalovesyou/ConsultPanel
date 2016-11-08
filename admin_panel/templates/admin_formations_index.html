@@ -1,0 +1,81 @@
+{% extends "admin_root.html" %}
+{% load staticfiles %}
+
+{% block header_action %}
+    <a href="{% url 'formations_add' %}" class="btn btn-rounded btn-success">
+        <i class="font-icon-plus"> Ajouter une formation</i>
+    </a>
+{% endblock %}
+
+{% block content %}
+
+    <section class="box-typical box-typical-max-screen box-table">
+        <header class="box-typical-header">
+            <div class="tbl-row">
+                <div class="tbl-cell tbl-cell-title datatable-custom-search">
+                    <input type="text" placeholder="Rechercher une formation" class="form-control"
+                           id="datatable-custom-search">
+                </div>
+                <div class="tbl-cell tbl-cell-action-bordered">
+                    <button type="button" id="action-edit" class="action-btn disabled"><i
+                            class="font-icon font-icon-pencil"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Sélectionnez une formation pour l'éditer"></i> Editer
+                    </button>
+                </div>
+                <div class="tbl-cell tbl-cell-action-bordered">
+                    <button type="button" id="action-delete" class="action-btn disabled"><i
+                            class="font-icon font-icon-trash"
+                            data-toggle="tooltip"
+                            data-placement="left"
+                            title="Sélectionnez une formation pour la supprimer"></i> Supprimer
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="box-typical-body">
+            <div class="table-responsive">
+
+                <table id="formations" class="display table cp" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Description</th>
+                        <th>Prix H.T</th>
+                        <th>Prix T.T.C</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for f in formations_list %}
+                        <tr data-id="{{ f.id }}"
+                            data-edit="{% url 'formations_edit' f.id %}"
+                            data-details
+                            data-delete="{% url 'ajax_formations_delete' f.id %}">
+                            <td>{{ f.nom }}</td>
+                            <td>{{ f.description|truncatechars_html:30 }}</td>
+                            <td>{{ f.prix_ht }}</td>
+                            <td>{{ f.prix_ttc }}</td>
+                            <td>
+                                <a href={% url 'formations_detail' f.id %} type="button"
+                                        class="btn btn-sm btn-rounded btn-secondary-outline ">
+                                    Détails
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        createBoxTab('#formations');
+    </script>
+{% endblock %}

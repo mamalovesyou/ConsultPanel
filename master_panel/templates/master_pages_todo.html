@@ -1,0 +1,176 @@
+{% extends 'master_root.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container">
+  <h1>v0.1 (MVP) : Echéance le 31 Mai 2016</h1>
+  ______________________________________________________________________________
+  <h2>Codes couleurs</h2>
+  <p>Etre précis pour ne pas laisser de bug ou fonctionnalités incomplètes</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Etat d'avancement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-success">
+        <td>Fonctionnalité complète et débuguée</td>
+      </tr>
+      <tr class="table-danger">
+        <td>Fonctionnalité non implémentée</td>
+      </tr>
+      <tr class="table-warning">
+        <td>Fonctionnalité en cours d'implémentation (incomplète et non débuguée)</td>
+      </tr>
+      <tr class="table-info">
+        <td>Fonctionnalité incomplète mais débuguée</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2></h2>
+<div class="container">
+  <h2>Index des fonctionnalités</h2>
+  <p>A BIEN TENIR A JOUR</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Etat d'avancement</th>
+        <th>Notes diverses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-success">
+        <td>Se connecter en tant que formateur</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Afficher la liste des formations</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Ajouter une formation</td>
+        <td>Champs du modèle à compléter</td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Modifier une formation</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Supprimer une formation</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>Se connecter en tant que client</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Adopter un système de catalogue</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Afficher la liste des catalogues</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Ajouter un catalogue</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Modifier un catalogue</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Supprimer un catalogue</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Ajouter une session</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Modifier une session</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Supprimer une session</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Ajouter une entreprise</td>
+        <td></td>
+      </tr>
+      <tr class="table-success">
+        <td>En tant que formateur : Modifier une entreprise</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Supprimer une entreprise</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Ajouter un client</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Modifier un client</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Supprimer un client</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Lier un client à une entreprise</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Ajouter un stagiare pour un client</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Modifier un stagiare pour un client</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Supprimer un stagiare pour un client</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Envoyer un mail à un client</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Inscrire des stagiaires à une session de formation pour un client</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Modifier une inscription à une session de formation pour un client</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>En tant que formateur : Annuler une inscription à une session de formation pour un client</td>
+        <td></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+<div class="container">
+  <h2>Liste des bugs</h2>
+  <p>Les bugs les moins importants sont de niveau 1 afin de permettre de placer un bug en prioritaire (niveau supérieur au niveau maximum du tableau)</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Fonctionnalité affectée</th>
+        <th>Manipulation buguée</th>
+        <th>Niveau d'importance</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+</div>
+{% endblock %}

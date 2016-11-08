@@ -1,0 +1,23 @@
+{% extends "public_pages_root_center.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <form action="{% url "public_form" name="login" %}" method="post" class="sign-box">
+        {% csrf_token %}
+        <div class="sign-avatar">
+            <img src="{% static 'main/img/consultpanel_logo_blue.png' %}" alt="Logo Consult Panel">
+        </div>
+        <header class="sign-title">Consult Panel</header>
+        <div class="form-group">
+            {{ login_form.username }}
+        </div>
+        <div class="form-group">
+            {{ login_form.password }}
+        </div>
+        <button type="submit" class="btn btn-rounded">Connexion</button>
+        <!--TODO Mot de passe oublie-->
+        <p class="sign-note"><a href="{% url "public_forgot_password" %}">Mot de passe oublié</a></p>
+    </form>
+
+{% endblock %}

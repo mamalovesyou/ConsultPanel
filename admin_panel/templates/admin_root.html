@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+{% comment "Head" %}{% endcomment %}
+{% include "admin_head.html" %}
+
+<body class='with-side-menu'>
+
+{% comment "Header" %}{% endcomment %}
+{% include "admin_header.html" %}
+
+{% comment "Side Menu" %}{% endcomment %}
+{% include "admin_side_menu.html" %}
+
+{% comment "Content" %}{% endcomment %}
+<div class="page-content">
+    {% if header|default_if_none:True %}
+        <header class="page-content-header">
+            <div class="container-fluid">
+                <div class="tbl">
+                    <div class="tbl-row">
+                        <div class="tbl-cell">
+                            <h3>{{ page_title | default:"Consult Panel" }}</h3>
+                        </div>
+                        <div class="tbl-cell tbl-cell-action">
+                            {% block header_action %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    {% endif %}
+    <div class="container-fluid">
+        {% include "admin_alert.html" %}
+
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+{% comment "Scripts" %}{% endcomment %}
+{% include "admin_scripts.html" %}
+{% block script %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* ==========================================================================
+   COLOR: RED #1892F8 - #cb6060
+========================================================================== */ 
+a, .text-color {
+ 	color: #1892F8;
+}
+
+.color-bg {
+    background-color: #1892F8;
+}
+
+/*------------------------------------------*/
+/*	 Buttons 
+/*------------------------------------------*/
+.btn-color-ghost {
+	background: transparent;
+	color: #1892F8;
+	border-color: #1892F8;
+}
+
+.btn-color, .btn-color-ghost:hover {
+	background: #1892F8;
+	color: #fff;
+	border-color: #1892F8;
+}
+
+.btn-color:hover {
+	background: #ffffff;
+	color: #1892F8;
+	border-color: #1892F8;
+}
+
+.btn-white {
+    color: #1892F8;
+}
+
+.navbar-nav>li>a.btn-signup {
+    background: #1892F8;
+    color: #ffffff;
+    border-color: #1892F8;
+}
+
+.navbar-nav>li>a.btn-signup:hover, .navbar-nav>li>a.btn-signup:focus {
+    background: #ffffff;
+    color: #1892F8;
+    border-color: #ffffff;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-ghost:hover {
+    background: #ffffff;
+    color: #1892F8;
+    border-color: #ffffff;
+}
+
+.btn-white {
+    background: #ffffff;
+    color: #1892F8;
+    border-color: #ffffff;
+}
+
+.btn-white:hover {
+    background: transparent;
+}
+
+.btn-grey {
+    color: #3e3e3e;
+    background-color: transparent;
+    border-color: #7f8c8d;
+}
+
+.btn-grey:hover {
+    color: #3e3e3e;
+    border-color: #3e3e3e;
+    background-color: transparent;
+}
+
+/*------------------------------------------*/
+/*   Header Solid Bg
+/*------------------------------------------*/
+.solid-bg{
+    background:none;
+    background-color: #1892F8;
+}
+
+.navbar-nav>li>a.btn-white{
+    color: #1892F8;
+}
+
+/*------------------------------------------*/
+/*   Header App
+/*------------------------------------------*/
+.type .hero-section span{
+    background-color: #1892F8;
+}
+
+/*------------------------------------------*/
+/*	 Form
+/*------------------------------------------*/
+.form-control {
+    border: 2px solid #cb6060;
+}
+
+/*------------------------------------------*/
+/*	 Icons
+/*------------------------------------------*/
+.icon-lg:hover, .icon-lg:focus, .icon-sm:hover, .icon-sm:focus {
+    color:#1892F8;
+}
+
+/*------------------------------------------*/
+/*	 Preloader
+/*------------------------------------------*/
+.preloader{
+	background-color: #1892F8;
+}
+
+/*------------------------------------------*/
+/*   Navbar Links Menu
+/*------------------------------------------*/
+.is-scrolling .navbar-nav>.active>a, .is-scrolling .navbar-nav>.active>a:hover, .is-scrolling .navbar-nav>.active>a:focus {
+    color: #1892F8;
+    background-color: transparent;
+}
+
+/*------------------------------------------*/
+/*   Login/Signup Modal
+/*------------------------------------------*/
+.login .modal-header .modal-title span{
+    font-weight: 400;
+    color: #1892F8;
+}
+
+/*------------------------------------------*/
+/*   Pricing Tab
+/*------------------------------------------*/
+.pricing-tab {
+    border: 3px solid #cb6060;
+}
+
+.pricing-tab h4 {
+    border-bottom: 3px solid #cb6060;
+}
+
+.pricing-tab .ribbon .popular{
+    background-color: #1892F8;
+}
+
+/*------------------------------------------*/
+/*   Team
+/*------------------------------------------*/
+.team-img .img-icons span i:hover{
+    color: #1892F8;
+}
+
+/*------------------------------------------*/
+/*   Signup-Divider & Fast-Reg
+/*------------------------------------------*/
+
+.signup-divider .btn:hover{
+    background: #1892F8;
+    border-color: #1892F8;;
+}
+
+.signup-divider input,
+.signup-divider button{
+    -webkit-transition: color 1s;
+    transition: color 1s;
+}
+
+.signup-divider input:-webkit-autofill,
+.signup-divider input:-webkit-autofill:focus,
+.signup-divider input:-webkit-autofill:hover
+{
+    -webkit-box-shadow: 0 0 0px 1000px #323a45 inset;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+.signup-divider .input-group.false input{
+    border-color: #c0392b;
+}
+
+.signup-divider input.focus
+{
+    border-color: #1892F8 !important;
+}
+
+.signup-divider .input-group.false button{
+    border-color: #c0392b;
+    background-color: #c0392b;
+    color: #FFFFFF;
+}
+
+.signup-divider .thanks{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    display: block;
+    text-align: center;
+}
+
+.signup-divider .thanks.error{
+    background-color: #c0392b;
+    color: #FFFFFF;
+}
+
+.signup-divider.hidden{
+    display: none;
+}
+
+.fast-reg .form-control:focus{
+    background-color: #1892F8;
+    border-color: #1892F8;
+    box-shadow: none;
+}
+
+/*------------------------------------------*/
+/*   Footer
+/*------------------------------------------*/
+.footer a:hover{
+    color: #1892F8;
+}
+
+.footer .contact-content a {
+    color: #1892F8;
+}
+
+/*------------------------------------------*/
+/*   Chatra
+/*------------------------------------------*/
+.chatra--expanded{
+    margin-bottom: -22px;
+}
+
+

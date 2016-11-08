@@ -1,0 +1,67 @@
+{% extends "admin_root.html" %}
+
+{% block header_action %}
+<a href="{% url 'entreprises_add' %}" class="btn btn-rounded btn-success">
+    <i class="font-icon-plus"> Ajouter une entreprise</i>
+</a>
+{% endblock %}
+
+{% block content %}
+
+<section class="box-typical box-typical-max-screen">
+    <header class="box-typical-header">
+        <div class="tbl-row">
+            <div class="tbl-cell tbl-cell-title">
+                <h3>{{entreprises_list.count}} Entreprise{% if entreprises_list.count > 1%}s{%endif%}</h3>
+            </div>
+            <div class="tbl-cell tbl-cell-action-bordered">
+                <button type="button" class="action-btn"><i class="font-icon font-icon-pencil"></i> Editer</button>
+            </div>
+            <div class="tbl-cell tbl-cell-action-bordered">
+                <button type="button" class="action-btn"><i class="font-icon font-icon-trash"></i> Supprimer</button>
+            </div>
+        </div>
+    </header>
+    <div class="box-typical-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            Nom
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for e in entreprises_list %}
+                    <tr>
+                        <td class="table-check">
+                            <div class="checkbox checkbox-only">
+                                <input type="checkbox" id="tbl-check-2-1">
+                                <label for="tbl-check-2-1"></label>
+                            </div>
+                        </td>
+                        <td>
+                            {{ e.nom }}
+                        </td>
+                         <td>
+                            <a href={% url 'entreprises_detail' e.id %} type="button" class="btn btn-inline btn-primary">
+                                Détail
+                            </a>
+                            <a href={% url 'entreprises_edit' e.id %} type="button" class="btn btn-inline btn-info">
+                                Modifier
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

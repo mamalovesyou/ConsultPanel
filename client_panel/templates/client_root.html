@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+{% comment "Head" %}{% endcomment %}
+{% include "admin_head.html" %}
+
+<body>
+
+{% comment "Header" %}{% endcomment %}
+{% include "client_header.html" %}
+
+{% comment "Content" %}{% endcomment %}
+<div class="page-content">
+    <div class="container-fluid">
+        {% include "admin_alert.html" %}
+
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+{% comment "Footer" %}{% endcomment %}
+{% include "client_footer.html" %}
+
+
+{% comment "Scripts" %}{% endcomment %}
+{% include "admin_scripts.html" %}
+
+</body>
+</html>

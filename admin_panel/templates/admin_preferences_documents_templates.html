@@ -1,0 +1,51 @@
+{% load staticfiles %}
+
+<h2>Structures</h2>
+
+<section class="box-typical files-manager">
+    <nav class="files-manager-side">
+        <header class="files-manager-side-title">Documents</header>
+        <ul class="files-manager-side-list">
+            {% for type in dg_types %}
+                <li>
+                    <a href="files-manager-1-tab-{{ type.id }}" {% if forloop.first %}class="active"{% endif %}>
+                        {{ type.label }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <div class="files-manager-panel">
+        <div class="files-manager-panel-in">
+
+            <div class="files-manager-content">
+                <div class="files-manager-content-in scrollable-block">
+                    <div class="fm-file-grid">
+
+                        {% for template in dg_templates %}
+                        <div class="fm-file hidden files-manager-1-tab-{{template.type.id}}" data-template-name="{{ template }}">
+                            <div class="fm-file-icon">
+                                <img src="{% static 'main/img/file.png' %}" alt="">
+                            </div>
+                            <div class="fm-file-name">{{ template }}</div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+            <section class="files-manager-aside">
+                <div class="files-manager-aside-section">
+                    <div class="box-typical-header-sm">PSD</div>
+
+                    <img class="preview" src="{% static 'main/img/cv.jpg' %}">
+
+                    <button class="btn btn-rounded" id="file-use"><i class="font-icon-left font-icon-download-3"></i>Utiliser</button>
+                    <button type="button" class="btn btn-rounded" id="file-already-used" disabled="">Déjà Utilisé</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

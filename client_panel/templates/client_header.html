@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<header class="site-header">
+    <div class="container-fluid">
+
+        {% comment "Logo"%}{% endcomment %}
+        <a href="{% url 'admin_index' %}" class="site-logo">
+            <img class="hidden-md-down" src="http://fakeimg.pl/50x50/00a8ff/fff/?text=Entreprise&retina=1" alt="Logo Consult Panel">
+            <img class="hidden-lg-up" src="http://fakeimg.pl/50x50/00a8ff/fff/?text=Entreprise&retina=1" alt="Logo Consult Panel">
+        </a>
+
+        {% comment "Hamburger %}
+        <button class="hamburger hamburger--htla">
+            <span>Menu</span>
+        </button>
+        {% endcomment %}
+
+        {% comment "Content"%}{% endcomment %}
+        <div class="site-header-content">
+            <div class="site-header-content-in">
+
+                <span class="company-name">Nom de l'entreprise</span>
+
+                {% comment "Header Shown" %}
+                <div class="site-header-shown">
+                    <button type="button" class="burger-right">
+                        <i class="font-icon-menu-addl"></i>
+                    </button>
+                </div>
+                {% endcomment %}
+                {% comment "Mobile menu right overlay" %}
+                <div class="mobile-menu-right-overlay"></div>
+                {% endcomment %}
+                {% comment "Header collapsed" %}
+                <div class="site-header-collapsed">
+                    <div class="site-header-collapsed-in">
+                    </div>
+                </div>
+                {% endcomment %}
+            </div>
+        </div>
+    </div>
+</header>
